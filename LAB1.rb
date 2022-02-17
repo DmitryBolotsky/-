@@ -2,15 +2,40 @@
 # puts String.instance_methods
 
 
+# puts "Какой язык программирования вам нравится больше всего"
+# lanh = STDIN.gets.chomp
+# case lanh
+# when "ruby"
+#     puts "норм лижешь"
+# when "c++"
+#   puts "жалко тебя добряк, но будет руби"
+# when "c#"
+#   puts "ООПшный респект, но будет руби"
+# when "kotlin"
+#   puts "красиво делаешь, но передумай"
+# end
+
+
+#условный оператор варианты
 puts "Какой язык программирования вам нравится больше всего"
 lanh = STDIN.gets.chomp
-case lanh
-when "ruby"
-    puts "норм лижешь"
-when "c++"
-  puts "жалко тебя добряк, но будет руби"
-when "c#"
-  puts "ООПшный респект, но будет руби"
-when "kotlin"
-  puts "красиво делаешь, но передумай"
-end
+# if lanh == "ruby" then
+#   puts "норм лижешь"
+# else puts "теперь будет руби"
+# end
+
+
+# x = if lanh == "ruby" then "норм лижешь"
+# else "теперь будет руби" end
+# puts x
+
+
+# unless lanh != "ruby" then
+#   puts "норм лижешь"
+# else
+#   puts "теперь будет руби"
+# end
+
+x = unless lanh!="ruby" then "норм лижешь"
+else "теперь будет руби" end
+puts x
