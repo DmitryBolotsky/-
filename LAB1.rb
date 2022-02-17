@@ -45,6 +45,8 @@
 # system(STDIN.gets.chomp)
 # exec(STDIN.gets.chomp)
 # puts 'STDIN.gets.chomp'
-puts "Введите команду руби"
-puts `irb`
-puts `STDIN.gets.chomp`
+
+
+# puts "Введите команду руби"
+# puts `irb`
+# puts `STDIN.gets.chomp`
