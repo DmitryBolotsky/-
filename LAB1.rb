@@ -17,8 +17,8 @@
 
 
 #условный оператор варианты
-puts "Какой язык программирования вам нравится больше всего"
-lanh = STDIN.gets.chomp
+# puts "Какой язык программирования вам нравится больше всего"
+# lanh = STDIN.gets.chomp
 # if lanh == "ruby" then
 #   puts "норм лижешь"
 # else puts "теперь будет руби"
@@ -36,6 +36,15 @@ lanh = STDIN.gets.chomp
 #   puts "теперь будет руби"
 # end
 
-x = unless lanh!="ruby" then "норм лижешь"
-else "теперь будет руби" end
-puts x
+# x = unless lanh!="ruby" then "норм лижешь"
+# else "теперь будет руби" end
+# puts x
+
+
+# puts "Введите команду операционной системы"
+# system(STDIN.gets.chomp)
+# exec(STDIN.gets.chomp)
+# puts 'STDIN.gets.chomp'
+puts "Введите команду руби"
+puts `irb`
+puts `STDIN.gets.chomp`
