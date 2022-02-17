@@ -50,3 +50,14 @@
 # puts "Введите команду руби"
 # puts `irb`
 # puts `STDIN.gets.chomp`
+
+# Задание 2
+
+x = Integer(ARGV[0])
+sum = 0
+loop do
+  sum += x % 10
+  x = x/10
+  break if x == 0
+end
+puts sum
