@@ -121,3 +121,15 @@ def simpleDel(x)
   end
   puts sum
 end
+
+def oddQuant(x)
+  count = 0
+  loop do
+    if (x % 10 % 2 != 0) & (x % 10 > 3)
+      count +=1
+    end
+    x/=10
+    break if x == 0
+  end
+  puts count
+end
