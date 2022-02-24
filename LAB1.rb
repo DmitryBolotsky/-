@@ -1,5 +1,8 @@
-#print "Hello #{ARGV}"
+# print "Hello #{ARGV[0]}"
+# puts "Hello World"
 # puts String.instance_methods
+# puts String.methods
+# puts "Привет".methods
 
 
 # puts "Какой язык программирования вам нравится больше всего"
@@ -43,7 +46,6 @@
 
 # puts "Введите команду операционной системы"
 # system(STDIN.gets.chomp)
-# exec(STDIN.gets.chomp)
 # puts 'STDIN.gets.chomp'
 
 
@@ -53,11 +55,21 @@
 
 # Задание 2
 
-x = Integer(ARGV[0])
-sum = 0
-loop do
-  sum += x % 10
-  x = x/10
-  break if x == 0
+# x = Integer(ARGV[0])
+# sum = 0
+# loop do
+#   sum += x % 10
+#   x = x/10
+#   break if x == 0
+# end
+# puts sum
+
+def sumOfNum(x)
+  sum = 0
+  loop do
+    sum += x % 10
+    x = x/10
+    break if x == 0
+  end
+  puts sum
 end
-puts sum
