@@ -73,3 +73,37 @@ def sumOfNum(x)
   end
   puts sum
 end
+
+def minQuant(x)
+  min = x
+  loop do
+    if(min>(x%10))
+      min = x % 10
+    end
+    x/=10
+    break if x == 0
+  end
+  puts min
+end
+
+def maxQuant(x)
+  max = 0
+  loop do
+    if(max<(x%10))
+      max = x % 10
+    end
+    x/=10
+    break if x == 0
+  end
+  puts max
+end
+
+def QuantMultiply(x)
+  mult = 1
+  loop do
+    mult *= x % 10
+    x/=10
+    break if x == 0
+  end
+  puts mult
+end
