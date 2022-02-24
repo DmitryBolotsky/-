@@ -107,3 +107,17 @@ def QuantMultiply(x)
   end
   puts mult
 end
+
+def simpleDel(x)
+  sum = 0
+  i = 2
+  while i <= x
+    if x % i == 0
+      sum += i
+      x /= i
+    else
+      i+=1
+    end
+  end
+  puts sum
+end
