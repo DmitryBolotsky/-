@@ -64,6 +64,8 @@
 # end
 # puts sum
 
+
+
 def sumOfNum(x)
   sum = 0
   loop do
@@ -72,6 +74,15 @@ def sumOfNum(x)
     break if x == 0
   end
   puts sum
+end
+def sumOfNumRet(x)
+  sum = 0
+  loop do
+    sum += x % 10
+    x = x/10
+    break if x == 0
+  end
+  return sum
 end
 
 def minQuant(x)
@@ -132,4 +143,15 @@ def oddQuant(x)
     break if x == 0
   end
   puts count
+end
+
+def MultyDef(x)
+  sumx = sumOfNumRet(x)
+  proiz = 1
+(1 ... x).each do |i|
+if (x%i == 0)&(sumOfNumRet(i)<sumx)
+  proiz*=i
+end
+end
+  puts proiz
 end
