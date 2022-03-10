@@ -155,3 +155,25 @@ end
 end
   puts proiz
 end
+
+
+
+
+num = ARGV[0].to_i
+case num
+when 1
+  sumOfNum(ARGV[1].to_i)
+when 2
+  minQuant(ARGV[1].to_i)
+when 3
+  maxQuant(ARGV[1].to_i)
+when 4
+  QuantMultiply(ARGV[1].to_i)
+when 5
+  simpleDel(ARGV[1].to_i)
+when 6
+  oddQuant(ARGV[1].to_i)
+when 7
+  MultyDef(ARGV[1].to_i)
+else puts "Hello World"
+end
