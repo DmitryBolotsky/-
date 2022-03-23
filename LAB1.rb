@@ -177,3 +177,43 @@ when 7
   MultyDef(ARGV[1].to_i)
 else puts "Hello World"
 end
+
+
+
+
+
+def minEl(arr)
+  min = arr[0]
+  (1 ... arr.size).each do |i|
+    if arr[i]<min then
+      min = arr[i]
+    end
+  end
+  puts min
+end
+
+def maxEl(arr)
+  max = arr[0]
+  (1 ... arr.size).each do |i|
+    if arr[i]>max then
+      max = arr[i]
+    end
+  end
+  puts max
+end
+
+def sumEl(arr)
+  sum = 0
+  (0 ... arr.size).each do |i|
+    sum += arr[i]
+  end
+  puts sum
+end
+
+def multEl(arr)
+  mult = 1
+  (0 ... arr.size).each do |i|
+    mult *= arr[i]
+  end
+  puts mult
+end
