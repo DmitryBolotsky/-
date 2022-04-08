@@ -264,4 +264,22 @@ def colAfterMax
   end
   puts "col of #{max} => #{imax}"
 end
-  colAfterMax()
+ 
+def afterMin
+  list = []
+  puts "list ?"
+  str = gets.chomp
+  str.split.each { |el| list.push el.to_i }
+  min = list[0]
+  imin = 0
+  list.each_with_index do |el, i|
+      if el < min then
+          min = el
+          imin = i
+      end
+  end
+
+  puts list[imin,list.size()]+list[0,imin]
+end
+
+
