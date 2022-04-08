@@ -145,38 +145,38 @@ def oddQuant(x)
   puts count
 end
 
-def MultyDef(x)
-  sumx = sumOfNumRet(x)
-  proiz = 1
-(1 ... x).each do |i|
-if (x%i == 0)&(sumOfNumRet(i)<sumx)
-  proiz*=i
-end
-end
-  puts proiz
-end
+# def MultyDef(x)
+#   sumx = sumOfNumRet(x)
+#   proiz = 1
+# (1 ... x).each do |i|
+# if (x%i == 0)&(sumOfNumRet(i)<sumx)
+#   proiz*=i
+# end
+# end
+#   puts proiz
+# end
 
 
 
 
-num = ARGV[0].to_i
-case num
-when 1
-  sumOfNum(ARGV[1].to_i)
-when 2
-  minQuant(ARGV[1].to_i)
-when 3
-  maxQuant(ARGV[1].to_i)
-when 4
-  QuantMultiply(ARGV[1].to_i)
-when 5
-  simpleDel(ARGV[1].to_i)
-when 6
-  oddQuant(ARGV[1].to_i)
-when 7
-  MultyDef(ARGV[1].to_i)
-else puts "Hello World"
-end
+# num = ARGV[0].to_i
+# case num
+# when 1
+#   sumOfNum(ARGV[1].to_i)
+# when 2
+#   minQuant(ARGV[1].to_i)
+# when 3
+#   maxQuant(ARGV[1].to_i)
+# when 4
+#   QuantMultiply(ARGV[1].to_i)
+# when 5
+#   simpleDel(ARGV[1].to_i)
+# when 6
+#   oddQuant(ARGV[1].to_i)
+# when 7
+#   MultyDef(ARGV[1].to_i)
+# else puts "Hello World"
+# end
 
 
 
@@ -216,4 +216,35 @@ def multEl(arr)
     mult *= arr[i]
   end
   puts mult
+end
+
+def f32method(method, *list)
+  case method
+  when 1
+      puts "min => #{minEl(*list)}"
+  when 2
+      puts "max => #{maxEl(*list)}"
+  when 3
+      puts "sum => #{sumEl(*list)}"
+  when 4
+      puts "prod => #{multEl(*list)}"
+  end
+end
+
+def f32
+  puts "1 {min} | 2 {max} | 3 {sum} | 4 {prod} ?"
+  method = gets.chomp.to_i
+  puts "k {keyboard} | f {file} ?"
+  kof = gets.chomp
+  list = []
+  case kof
+  when "k"
+      str = gets.chomp
+      str.split.each { |el| list.push el.to_i }
+  when "f"
+      file = File.new("f32.txt", "r:UTF-8")
+      content = file.read
+      content.split.each { |el| list.push el.to_i }
+  end
+  f32method(method, *list)
 end
