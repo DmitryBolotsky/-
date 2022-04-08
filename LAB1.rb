@@ -248,3 +248,20 @@ def f32
   end
   f32method(method, *list)
 end
+
+def colAfterMax
+  list = []
+  puts "list ?"
+  str = gets.chomp
+  str.split.each { |el| list.push el.to_i }
+  max = list[0]
+  imax = 0
+  list.each_with_index do |el, i|
+      if el > max then
+          max = el
+          imax = i
+      end
+  end
+  puts "col of #{max} => #{imax}"
+end
+  colAfterMax()
