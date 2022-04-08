@@ -282,4 +282,37 @@ def afterMin
   puts list[imin,list.size()]+list[0,imin]
 end
 
+def interMax
+  list = []
+  puts "list ?"
+  str = gets.chomp
+  puts "a?"
+  a = gets.chomp.to_i
+  puts "b?"
+  b = gets.chomp.to_i
+  str.split.each { |el| list.push el.to_i }
+  max = list[a]
+  imax = a
+  list2 = list[a,b]
+  list2.each_with_index do |el, i|
+      if el > max then
+          max = el
+          imax = i
+      end
+  end
+  puts "max of #{max}"
+end
+
+def idndofLeft
+list = []
+  puts "list ?"
+  str = gets.chomp
+  counter = 0
+  str.split.each { |el| list.push el.to_i }
+  temp = (1...list.size).select{|x| list[x] < list[x-1]}
+  puts temp
+end
+
+idndofLeft
+
 
