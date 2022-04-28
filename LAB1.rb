@@ -307,12 +307,99 @@ def idndofLeft
 list = []
   puts "list ?"
   str = gets.chomp
-  counter = 0
   str.split.each { |el| list.push el.to_i }
   temp = (1...list.size).select{|x| list[x] < list[x-1]}
   puts temp
 end
 
-idndofLeft
+def colofSimpleDel
+  list = []
+  puts "list ?"
+  str = gets.chomp
+  str.split.each { |el| list.push el.to_i }
+  b = (1..list/2+1)
+  c =[]
+  b.each {|i| if list % i == 0 then c.append(i) end}
+  puts c
+end
+
+def countRu(s)
+  puts s.count"А-я"
+end
+
+def polindrom()
+  s = "лешанаполкеклопанашел"
+ a =s.scan /А-я/
+ puts a == a.reverse
+end
+polindrom
+
+def datecheck
+  s = "18.12.2001 15.12.200o"
+  puts s.scan(/([0-2][0-9]|3[0-1]).(0[1-9]|1[0-2]).([0-9]{4})/).map{|e| e.join('.')}.join(" ")
+end
+
+#задание 6_0
+# s = "Я родился 19 июня 2001 года"
+# puts s.scan(/([0-2][0-9]|3[0-1]).(0[1-9]|1[0-2]|января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря).([0-9]{4})/).map{|e| e.join('.')}.join(" ")
 
 
+#задание 6_1
+# puts "Введите строку:"
+# str= STDIN.gets.chomp
+# puts  str.scan(/\-\d+\.\d+|\d+\.\d+/).map{ |n| n.to_f }.max
+
+
+#задание 6_9
+# puts "Введите строку:"
+# str= STDIN.gets.chomp
+# puts str.scan(/[-+]?\d+\/(?:\d{2,}|[1-9])/).map{ |i| i.split("/").map{ |j| j.to_i } }.map{ |i| Rational(i[0], i[1]) }.min
+
+
+#задание 6_18
+# puts "Введите строку:"
+# str= STDIN.gets.chomp
+# puts  str.scan(/\d+/).map{ |i| i.size }.max
+
+
+
+def add_list_from_file(name_file)
+  if File.exist? name_file+'.txt'
+    File.open(name_file+'.txt', 'r') do |file|
+      list = Array.new
+      for line in file.readlines()
+        list.append(line)
+      end
+      return list
+  end
+  else
+    return []
+  end
+end
+
+
+
+
+#задание 7_02
+def count_words(array)
+  count = 0
+  for word in array.split()
+    count += 1
+  end
+  return count
+end
+
+
+
+
+#задание 7_1
+def raznica_glas_soglas(s)
+  ss=s.delete " "
+  count_char=ss.length
+  count_sogl=(ss.delete! "аАОоЭэЕеиИыЫуУёЁюЮяЯ").length
+  count_glas=count_char-count_sogl
+  return (count_glas-count_sogl).abs
+  end
+
+# kek = add_list_from_file('rows')
+# puts kek.sort_by {|str| -raznica_glas_soglas(str)}
